@@ -1,0 +1,13 @@
+<div class="main center">
+  <h1>Welcome to our Book Store!</h1>
+
+  <h2>
+    This is the home page for our demo app.
+  </h2>
+  <% if logged_in? %>
+  <%= link_to "Books", books_path %>
+  <% else %>
+  <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>
+

@@ -1,0 +1,27 @@
+<% provide(:title, @book.title) %>
+
+<div class="row center">
+  <aside class="col-md-4">
+    <section class="book_info">
+      <h1>
+	Title: <%= @book.title %>
+      </h1>
+      <%= link_to "Like", '#' %>
+      <h2>
+	Genre: <%= @book.genre %>
+	<br />
+	Author: <%= @book.author %>
+	<br />
+	Tags: 
+	<% @book.tags.each do |tag| %>
+	<%= tag %>
+	<br />
+	<% end %>
+	<br />
+	Publisher: <%= @book.publisher %>
+	<br />
+      </h2>
+      <%= link_to "Read Book", book_data_path(@book) %>
+    </section>
+  </aside>
+</div>
